@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@keyframes fly-left-to-right {
+  0% {
+    transform: translateX(150px) translateY(0px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(50vw) translateY(-120px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(110vw) translateY(-180px);
+    opacity: 0;
+  }
+}
+
+@keyframes fly-right-to-left {
+  0% {
+    transform: translateX(150px) translateY(0px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50vw) translateY(-120px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-110vw) translateY(-180px);
+    opacity: 0;
+  }
+}
+
+.animate-fly-left {
+  animation: fly-left-to-right 9s linear infinite;
+}
+
+.animate-fly-right {
+  animation: fly-right-to-left 9s linear infinite;
+}
